@@ -5,11 +5,11 @@ function tsvwrite(outfname,header,data)
 % INPUTS:
 % outfname       - Output file name (string)
 % header         - Header (cell array)
-% data           - Data (cell matrix or numeral matrix)
+% data           - Data (cell matrix or numeric matrix)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0004 2023-01-30Z $
+% $Id: tsvwrite 0005 2023-01-30Z $
 
 [pth,nam,ext] = fileparts(outfname);
 if ~strcmp(ext,'.tsv');
