@@ -9,7 +9,7 @@ Simple functions for processing tsv files using MATLAB (convert xlsx to tsv, rea
 ```matlab
 xlsx2tsv('data.xlsx', 'out.tsv')
 tsv2xlsx('data.tsv', 'out.xlsx')
-tsvwrite('data.tsv', {'height' 'weight'},[180 85; 170 70]) % matrix data
-tsvwrite('data.tsv', {'id' 'food'},{'25'  'apple'; '64' 'orange'}) % cell data
+tsvwrite('data.tsv', {'height' 'weight'}, [180 85; 170 70]) % matrix data
+tsvwrite('data.tsv', {'id' 'food'}, {'25'  'apple'; '64' 'orange'}) % cell data
 ```
 
