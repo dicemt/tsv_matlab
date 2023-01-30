@@ -3,13 +3,13 @@ function tsvwrite(outfname,header,data)
 % FORMAT tsvwrite(outfname,header,data)
 %
 % INPUTS:
-% outfname       - Outpuf file name (string)
+% outfname       - Output file name (string)
 % header         - Header (cell array)
 % data           - Data (cell matrix or numeral matrix)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0003 2023-01-13Z $
+% $Id: tsvwrite 0004 2023-01-30Z $
 
 [pth,nam,ext] = fileparts(outfname);
 if ~strcmp(ext,'.tsv');
