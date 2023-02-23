@@ -9,10 +9,10 @@ function tsvwrite(outfname,header,data)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0005 2023-01-30Z $
+% $Id: tsvwrite 0006 2023-02-23Z $
 
 [pth,nam,ext] = fileparts(outfname);
-if ~strcmp(ext,'.tsv');
+if ~strcmp(ext,'.tsv')
     ext = '.tsv';
     outfname = fullfile(pth,[nam ext]);
 end
