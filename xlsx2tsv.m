@@ -1,6 +1,6 @@
-function xlsx2tsv(xlsfname,newfname)
+function newfname = xlsx2tsv(xlsfname,newfname)
 % Convert an xlsx file into a tsv file
-% FORMAT xlsx2tsv(xlsfname,newfname)
+% FORMAT newfname = xlsx2tsv(xlsfname,newfname)
 %
 % INPUTS:
 % xlsfname       - Input xls (or xlsx) file name (string)
@@ -14,7 +14,7 @@ function xlsx2tsv(xlsfname,newfname)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0005 2023-06-14Z $
+% $Id: tsvwrite 0006 2023-06-14Z $
 
 xlsdata = readcell(xlsfname);
 if nargin < 2

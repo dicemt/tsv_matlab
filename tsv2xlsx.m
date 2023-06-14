@@ -1,6 +1,6 @@
-function tsv2xlsx(tsvfname,newfname)
+function newfname = tsv2xlsx(tsvfname,newfname)
 % Convert a tsv file into an xlsx file
-% FORMAT tsv2xlsx(tsvfname,newfname)
+% FORMAT newfname = tsv2xlsx(tsvfname,newfname)
 %
 % INPUTS:
 % tsvfname       - Input tsv file name (string)
@@ -14,7 +14,7 @@ function tsv2xlsx(tsvfname,newfname)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0004 2023-01-13Z $
+% $Id: tsvwrite 0005 2023-06-14Z $
 
 [~,~,raw] = tsvread(tsvfname);
 if nargin < 2
