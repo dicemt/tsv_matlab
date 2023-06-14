@@ -9,7 +9,7 @@ function tsvwrite(outfname,header,data)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0006 2023-02-23Z $
+% $Id: tsvwrite 0007 2023-06-14Z $
 
 [pth,nam,ext] = fileparts(outfname);
 if ~strcmp(ext,'.tsv')
@@ -18,6 +18,9 @@ if ~strcmp(ext,'.tsv')
 end
 
 % header
+if ~iscell(header)
+    error('2nd argument is not a cell array.')
+end
 fid = fopen(outfname,'w');
 if numel(header) == 1
     fprintf(fid,'%s\n',header{1});
@@ -30,6 +33,8 @@ fclose(fid);
 % data
 if ~iscell(data)
     data = arrayfun(@num2str, data, 'UniformOutput', 0);
+else
+    data = cellfun(@num2str, data, 'UniformOutput', 0);
 end
 
 fid = fopen(outfname,'a');

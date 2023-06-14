@@ -9,7 +9,7 @@ function csvwrite2(outfname,header,data)
 %__________________________________________________________________________
 % Copyright (C) 2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: csvwrite2 0006 2023-02-23Z $
+% $Id: csvwrite2 0007 2023-06-14Z $
 
 [pth,nam,ext] = fileparts(outfname);
 if ~strcmp(ext,'.csv')
@@ -18,6 +18,9 @@ if ~strcmp(ext,'.csv')
 end
 
 % header
+if ~iscell(header)
+    error('2nd argument is not a cell array.')
+end
 fid = fopen(outfname,'w');
 if numel(header) == 1
     fprintf(fid,'%s\n',header{1});

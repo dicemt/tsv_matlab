@@ -14,7 +14,7 @@ function xlsx2tsv(xlsfname,newfname)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0004 2023-01-13Z $
+% $Id: tsvwrite 0005 2023-06-14Z $
 
 xlsdata = readcell(xlsfname);
 if nargin < 2
@@ -22,7 +22,7 @@ if nargin < 2
     newfname = fullfile(pth,[nam '.tsv']);
 end
 [pth,nam,ext] = fileparts(newfname);
-if ~strcmp(ext,'.tsv');
+if ~strcmp(ext,'.tsv')
     ext = '.tsv';
     newfname = fullfile(pth,[nam ext]);
 end
