@@ -14,9 +14,13 @@ function newfname = xlsx2tsv(xlsfname,newfname)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0006 2023-06-14Z $
+% $Id: xlsx2tsv 0007 2023-07-04Z $
 
+% Read xlsx
 xlsdata = readcell(xlsfname);
+% Deal with missing cells
+xlsdata(cellfun(@(x) any(ismissing(x)), xlsdata)) = {''};
+
 if nargin < 2
     [pth,nam] = fileparts(xlsfname);
     newfname = fullfile(pth,[nam '.tsv']);
