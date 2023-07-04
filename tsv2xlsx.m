@@ -14,7 +14,7 @@ function newfname = tsv2xlsx(tsvfname,newfname)
 %__________________________________________________________________________
 % Copyright (C) 2022-2023 Daisuke MATSUYOSHI
 % Released under the MIT license
-% $Id: tsvwrite 0005 2023-06-14Z $
+% $Id: tsv2xlsx 0005 2023-06-14Z $
 
 [~,~,raw] = tsvread(tsvfname);
 if nargin < 2
