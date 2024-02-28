@@ -12,7 +12,7 @@ tsv2xlsx('data.tsv', 'out.xlsx') % input, output
 tsvwrite('data.tsv', {'height' 'weight'}, [180 85; 170 70]) % filename, header, matrix data
 tsvwrite('data.tsv', {'id' 'food'}, {'25'  'apple'; '64' 'orange'}) % filename, header, cell data
 % CSV
-csvwrite2('data.tsv', {'height' 'weight'}, [180 85; 170 70]) % filename, header, matrix data
-csvwrite2('data.tsv', {'id' 'food'}, {'25'  'apple'; '64' 'orange'}) % filename, header, cell data
+csvwrite2('data.csv', {'height' 'weight'}, [180 85; 170 70]) % filename, header, matrix data
+csvwrite2('data.csv', {'id' 'food'}, {'25'  'apple'; '64' 'orange'}) % filename, header, cell data
 ```
 
